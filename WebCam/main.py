@@ -34,8 +34,8 @@ while (capture.isOpened()):
     ret, frame = capture.read()
     # gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     # gray = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-    image = cv2.rectangle(frame, start_point, end_point, color, thickness)
-
+    # image = cv2.rectangle(frame, start_point, end_point, color, thickness)
+    image = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     if (ret == True):
         cv2.imshow("gato0", image)
         if (cv2.waitKey(30) == ord('s')):
